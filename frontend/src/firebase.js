@@ -2,14 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAXeiODemLV7GYmSnDs7woL-6uA0IU0Zpo",
-  authDomain: "nexabot-f59a1.firebaseapp.com",
-  projectId: "nexabot-f59a1",
-  storageBucket: "nexabot-f59a1.firebasestorage.app",
-  messagingSenderId: "935237187058",
-  appId: "1:935237187058:web:e1d8db447642c5ce04276b"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
